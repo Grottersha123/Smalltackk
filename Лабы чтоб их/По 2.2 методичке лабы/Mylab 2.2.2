@@ -1,0 +1,16 @@
+| f ar  s|
+f := AbtTextPrompter new
+	messageString: 'Vvedite stroky'; 
+	defaultAnswerString: '';
+	prompt.
+	
+ar := f subStrings.
+ar := ar collect: [ :c | c asDecimal raisedTo: 2 ].
+s := 0.
+ar do:  [ :c | s:=s+c].
+Transcript cr;
+		show: ar asString; 
+		cr;
+		show: s asString
+		
+"""Возводит в квадрат и ищет сумму всех чисел, которые возведены в квадрат"""

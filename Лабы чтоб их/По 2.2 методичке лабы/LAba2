@@ -1,0 +1,36 @@
+|temper sizer sufler i el n c p|
+sizer:= 5.
+temper:= Array new:sizer.
+i:=1.
+[i <= sizer]whileTrue: [
+	sufler:= AbtTextPrompter new
+	title: 'Input string size = ';
+	defaultAnswerString: ''; 
+	messageString: 'Enter string'.
+	el:= sufler prompt.
+	temper at: i put: el.
+	i:= i +1.
+].
+sufler:= AbtTextPrompter new
+	title: 'Size of  * ';
+	defaultAnswerString: ''; 
+	messageString: 'Enter size'.
+	n := sufler prompt asDecimal.
+	i:=1.
+		i:=1.
+ [i <= sizer] whileTrue: 
+ [ 
+	Transcript cr; show: (temper at: i) asString. 
+	i := i+1.
+ ]. 
+  i:= 1.
+	[i <= n] whileTrue: [
+	temper at: i put: '*'.
+	i:= i +1.
+].
+i:=1.
+ [i <= sizer] whileTrue: 
+ [ 
+	Transcript cr; show: (temper at: i) asString. 
+	i := i+1.
+ ]. 

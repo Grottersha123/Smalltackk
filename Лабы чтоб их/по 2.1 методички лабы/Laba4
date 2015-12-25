@@ -1,0 +1,13 @@
+|sufler string p| 
+
+sufler := AbtTextPrompter new. 
+sufler title: 'Question'; 
+defaultAnswerString: 'Hello world!'; 
+messageString: 'Enter answer please!'. 
+string :=sufler prompt. 
+p:= string copyFrom: 5 to: 10.
+
+Transcript cr 
+show: (p reverse asString); 
+cr; 
+show: (string size asString).
