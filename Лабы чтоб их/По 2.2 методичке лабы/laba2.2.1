@@ -1,0 +1,21 @@
+|temper sizer sufler  el n c p lol|
+sizer:= 5.
+temper:= Array new:sizer.
+1 to: sizer  do: [:i|
+	sufler:= AbtTextPrompter new
+				title: 'Input string size = ';
+				defaultAnswerString: ''; 
+				messageString: 'Enter string'.
+	el:= sufler prompt.
+	temper at: i put: el.
+].
+sufler:= AbtTextPrompter new
+			title: 'Size of  * ';
+			defaultAnswerString: ''; 
+			messageString: 'Enter size'.
+n := sufler prompt asDecimal.
+	
+ lol := '*'.
+ 1 to: n do: [:i| lol:=lol,'*'].
+ temper:= temper collect: [:ii | ii replaceFrom: 1 to:  n with: lol startingAt: 1].
+ temper collect: [:c | Transcript cr; show: c].

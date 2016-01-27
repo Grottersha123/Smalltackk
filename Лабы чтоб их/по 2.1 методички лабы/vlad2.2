@@ -1,0 +1,15 @@
+| f ar  s|
+f := AbtTextPrompter new
+	messageString: 'Vvedite stroky'; 
+	defaultAnswerString: '';
+	prompt.
+	
+ar := f subStrings.
+ar := ar reject: [ :c | c asNumber \\ 5 == 0].
+s := 0.
+ar do:  [ :c | s:=s+c asNumber ].
+Transcript cr;
+		show: ar asString; 
+		cr;
+		show: s asString
+		

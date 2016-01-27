@@ -1,0 +1,16 @@
+| str ar  siz|
+
+str :=    AbtTextPrompter  new
+			title: 'Работа со строками';
+			messageString: 'Введите строку';
+			defaultAnswerString: 'Hello worldddd!';
+			prompt.
+			
+ar:=(str copyFrom:5 to:10 )asUppercase.
+
+str replaceFrom:5 to:10 with:ar .
+siz := str size.
+
+Transcript  
+cr; show: str; cr; 
+show: siz asString.   
